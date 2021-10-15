@@ -1,0 +1,12 @@
+#img{
+    height: 100vh;
+    width:100vw;
+    
+    background-repeat: no-repeat;
+    background-position: left top;
+    object-fit: fill;
+}
+body{
+    overflow-x:hidden;
+    padding: 10px;
+}

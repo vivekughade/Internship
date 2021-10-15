@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import Bar from "./Bar";
-import { Redirect, useHistory } from 'react-router';
+import { Redirect, useHistory } from 'react-router-dom';
 const Login = () => {
     const initialState = {
         username:'',
@@ -53,7 +53,10 @@ const submithandler = (e) =>{
         console.log(err)
     })
     setState(s=>({...s,...initialState}))
+
 }
+
+       
     return (
         <>
         <div className="box">
@@ -68,12 +71,15 @@ const submithandler = (e) =>{
             </div>
 
         <form id="form" class="form">
-            
-                <label for="username">UserName</label>
-                <input type="text" value={state.username} onChange={changehandler}  placeholder="Enter Userid" id="username"/>
+                
+                <label for="username">Username</label>
+                <input type="text" value={state.username} onChange={changehandler}   id="username"/>
+               
+                
                 <label for="password">Password</label>
-                <input type="password" value={state.password} onChange={changehandler} placeholder="Enter Password" id="password"/>   
-            <button className="btn btn-success" onClick={submithandler}>submit</button>
+                <input type="password" value={state.password} onChange={changehandler}  id="password"/>   
+                
+            <button id="btn" className="btn btn-success" onClick={submithandler}>submit</button>
         </form>
  
     </div>	
